@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../contexts/StoreProvider";
-import UsersList from "../components/UsersList";
+import UsersList from "../components/Users/UsersList";
 
 const UsersPage = observer(() => {
   const { usersStore } = useStore();

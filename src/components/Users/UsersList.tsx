@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import UsersDataGrid from "./UsersDataGrid";
-import type { User } from "../services/userService";
+import type { User } from "../../services/userService";
 
 interface UsersListProps {
   users: User[];

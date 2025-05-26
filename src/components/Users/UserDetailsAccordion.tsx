@@ -2,7 +2,7 @@
 import React from "react";
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import type { User } from "../services/userService";
+import type { User } from "../../services/userService";
 
 interface UserDetailAccordionProps {
   user: User | null;

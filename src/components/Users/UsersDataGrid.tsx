@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { User } from "../services/userService";
+import type { User } from "../../services/userService";
 import { DataGrid, type GridColDef } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 
