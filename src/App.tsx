@@ -1,26 +1,19 @@
-import { useState } from "react";
-import { PeopleList } from "./components/PeopleList";
-import { peopleStore } from "./stores/peopleStore";
+import React from "react";
+import UsersPage from "./pages/UsersPage";
+import PageLayout from "./components/PageLayout";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import UserDetailPage from "./pages/UserDetailPage";
 
 function App() {
-  const [input, setInput] = useState("");
-
-  const handleSearch = () => {
-    peopleStore.setSearchQuery(input);
-  };
-
   return (
-    <div style={{ padding: "1rem" }}>
-      <h1>Recherche Star Wars</h1>
-      <input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Ex: Luke"
-      />
-      <button onClick={handleSearch}>Rechercher</button>
-
-      <PeopleList />
-    </div>
+    <Router>
+      <Routes>
+        <Route element={<PageLayout />}>
+          <Route path="/" element={<UsersPage />} />
+          <Route path="/user/:id" element={<UserDetailPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
