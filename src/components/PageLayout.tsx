@@ -11,7 +11,7 @@ const PageLayout: React.FC = () => {
         </Toolbar>
       </AppBar>
 
-      <Container component="main" sx={{ flexGrow: 1, padding: 2 }}>
+      <Container component="main" maxWidth={false} sx={{ padding: 2}}>
         <Outlet />
       </Container>
 
